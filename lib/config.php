@@ -25,16 +25,11 @@
 			8 => 'Finish laundry',
 			9 => 'Clean house'
 		),
-		'Chores' => array(
+		'Chores2' => array(
 			0 => 'Take out trash',
 			1 => 'Wash dishes',
 			2 => 'Finish laundry',
 			3 => 'Clean house'
-		),
-		'Dreams' => array(
-			0 => 'Relax',
-			1 => 'Take day off',
-			2 => 'Go on vacation'
 		),
 		'Etc' => array(
 			0 => 'Finish this app',
@@ -80,4 +75,17 @@
 		),
 	);
 
+	$SAMPLE_COLORS = array(
+		'Chores' => '#FF5656',
+		'Dreams' => '#FF7000',
+		'Combo' => '#FFC200',
+		'Chores2' => '#52CC00',
+		'Etc' => '#19DBCE',
+		'Asdf' => '#56aaff',
+		'Asdf2' => '#565fff',
+		'Asdf3' => '#9f56ff',
+		'Asdf4' => '#ff56f3',
+		'Asdf5' => '#FF5656',
+		'Asdf6' => '#FF7000'
+	)
 ?>

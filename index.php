@@ -4,7 +4,8 @@
 		<meta charset='utf-8'>
 		<title>Simple To Do List</title>
 		<link rel='stylesheet' href='css/style.css'>
-
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">		
 		<?php 
 			require('lib/config.php');
 			require('lib/classes/list.php');
@@ -13,13 +14,14 @@
 	</head>
 	<body>
 		<div id='menu'>
-			test
+			<h1>Simple To-Do List</h1>
+			<h2>Made for fun.</h2>
 		</div>
 
 		<div id='container'>
 			<?php 
 				foreach ($SAMPLE_DATA as $title=>$list) {
-					$toDoList = new ToDoList($title, $list);
+					$toDoList = new ToDoList($title, $list, $SAMPLE_COLORS[$title]);
 					$toDoList->generate();
 				}
 			?>
