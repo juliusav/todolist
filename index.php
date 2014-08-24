@@ -14,8 +14,8 @@
 	</head>
 	<body>
 		<div id='menu'>
-			<h1>Simple To-Do List</h1>
-			<h2>Made for fun.</h2>
+			<h1>Hue-Due</h1>
+			<h2>Your life, in color.</h2>
 		</div>
 
 		<div id='container'>

@@ -76,16 +76,16 @@
 	);
 
 	$SAMPLE_COLORS = array(
-		'Chores' => '#FF5656',
-		'Dreams' => '#FF7000',
-		'Combo' => '#FFC200',
-		'Chores2' => '#52CC00',
-		'Etc' => '#19DBCE',
-		'Asdf' => '#56aaff',
-		'Asdf2' => '#565fff',
-		'Asdf3' => '#9f56ff',
-		'Asdf4' => '#ff56f3',
-		'Asdf5' => '#FF5656',
-		'Asdf6' => '#FF7000'
+		'Chores' => '#FF7000',
+		'Dreams' => '#FFC200',
+		'Combo' => '#52CC00',
+		'Chores2' => '#19DBCE',
+		'Etc' => '#56aaff',
+		'Asdf' => '#565fff',
+		'Asdf2' => '#9f56ff',
+		'Asdf3' => '#ff56f3',
+		'Asdf4' => '#FF5656',
+		'Asdf5' => '#FF7000',
+		'Asdf6' => '#FFC200'
 	)
 ?>
