@@ -15,7 +15,8 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video,
+button, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -52,6 +53,22 @@ body {
 	background: url('../img/pixel_weave.png') center repeat;
 }
 
+::-webkit-input-placeholder {
+   color: #bfbfbf;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #bfbfbf;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #bfbfbf;  
+}
+
+:-ms-input-placeholder {  
+   color: #bfbfbf;  
+}
+
 /*
  * Menu
  */
@@ -60,7 +77,6 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 150px;
-	background-color: #FF5656;
 	z-index: 5;
 	top: 0;
 	padding: 0;
@@ -69,6 +85,90 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   box-shadow: 0 -13px 15px 10px #424242;
+  background-color: #FF5656;
+  overflow: hidden;
+}
+
+#menu .container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	background-color: #FF5656;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+#menu .settings {
+	position: absolute;
+	/*height: 400px;*/
+	width: 100%;
+	max-width: 400px;
+	/*background-color: #fff;*/
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 200px auto;
+}
+
+#menu .menu-view {
+	position: absolute;
+	width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#menu .menu-view > h2 {
+	height: 30px;
+	line-height: 30px;
+}
+
+#menu .menu-view form {
+	margin-bottom: 20px;
+}
+
+#menu .menu-view input {
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	border: none;
+	box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  padding: 15px;
+}
+
+#menu .menu-view input.email,
+#menu .menu-view input.email-register {
+	background-color: #fff;
+}
+
+#menu .menu-view input.password,
+#menu .menu-view input.password-register {
+	background-color: #efefef;
+}
+
+#menu .menu-view input.submit {
+	background-color: #A2A2A2;
+	color: #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#menu .menu-view input.submit:hover {
+	background-color: #6B6B6B;
+}
+
+#menu .btn {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 100;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  line-height: 25px;
 }
 
 #menu h1,
@@ -87,6 +187,21 @@ body {
 	color: #fff;
 	margin-top: 10px;
 	font-size: 15px;
+}
+
+#menu .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+
+#menu .right > .fa {
+	font-size: 30px;
+	color: #fff;
+	margin: 15px 20px 0 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 /*
@@ -113,6 +228,7 @@ body {
 .box {
 	position: relative;
 	width: 250px;
+	/*max-width: 500px;*/
 	min-height: 300px;
 	background-color: #fff;
 	margin: 10px;
@@ -176,6 +292,10 @@ body {
 	right: 0;
 	width: 30px;
 	text-align: center;
+}
+
+.box .item .arrow:hover {
+	background-color: #fff;
 }
 
 .box .item .arrow .fa {

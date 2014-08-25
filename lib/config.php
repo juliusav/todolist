@@ -1,91 +1,235 @@
 <?php
 	namespace Config;
 
-	$SAMPLE_DATA = array(
-		'Chores' => array(
-			0 => 'Take out trash',
-			1 => 'Wash dishes',
-			2 => 'Finish laundry',
-			3 => 'Clean house'
+	//USER DATA
+	DEFINE ('DB_USER', '');
+	DEFINE ('DB_PSWD', '');
+	DEFINE ('DB_HOST', '');
+	DEFINE ('DB_NAME', '');
+
+	//COLORS
+	$COLORS = array(
+		0 => '#FF5656',
+		1 => '#FF7000',
+		2 => '#FFC200',
+		3 => '#52CC00',
+		4 => '#19DBCE',
+		5 => '#56aaff',
+		6 => '#565fff',
+		7 => '#9f56ff',
+		8 => '#ff56f3'
+	);
+
+	//DB DATA
+	$DEFAULT_LISTS = array (
+		0 => array (
+			'ListID' => 0,
+			'UserID' => 'default',
+			'ListTitle' => 'List Title',
+			'ListColor' => $COLORS[1],
 		),
-		'Dreams' => array(
-			0 => 'Relax',
-			1 => 'Take day off',
-			2 => 'Go on vacation'
+		1 => array (
+			'ListID' => 1,
+			'UserID' => 'default',
+			'ListTitle' => 'List Title',
+			'ListColor' => $COLORS[2],
 		),
-		'Combo' => array(
-			0 => 'Finish this app',
-			1 => 'Or else...',
-			2 => 'Take out trash',
-			3 => 'Wash dishes',
-			4 => 'Finish laundry',
-			5 => 'Clean house',
-			6 => 'Take out trash',
-			7 => 'Wash dishes',
-			8 => 'Finish laundry',
-			9 => 'Clean house'
+		2 => array (
+			'ListID' => 2,
+			'UserID' => 'default',
+			'ListTitle' => 'List Title',
+			'ListColor' => $COLORS[3],
 		),
-		'Chores2' => array(
-			0 => 'Take out trash',
-			1 => 'Wash dishes',
-			2 => 'Finish laundry',
-			3 => 'Clean house'
+		3 => array (
+			'ListID' => 3,
+			'UserID' => 'default',
+			'ListTitle' => 'List Title',
+			'ListColor' => $COLORS[4],
 		),
-		'Etc' => array(
-			0 => 'Finish this app',
-			1 => 'Or else...',
-		),
-		'Asdf' => array(
-			0 => 'Take out trash',
-			1 => 'Wash dishes',
-			2 => 'Finish laundry',
-			3 => 'Clean house'
-		),
-		'Asdf2' => array(
-			0 => 'Relax',
-			1 => 'Take day off',
-			2 => 'Go on vacation'
-		),
-		'Asdf3' => array(
-			0 => 'Finish this app',
-			1 => 'Or else...',
-			2 => 'Take out trash',
-			3 => 'Wash dishes',
-			4 => 'Finish laundry',
-			5 => 'Clean house',
-			6 => 'Take out trash',
-			7 => 'Wash dishes',
-			8 => 'Finish laundry',
-			9 => 'Clean house'
-		),
-		'Asdf4' => array(
-			0 => 'Take out trash',
-			1 => 'Wash dishes',
-			2 => 'Finish laundry',
-			3 => 'Clean house'
-		),
-		'Asdf5' => array(
-			0 => 'Relax',
-			1 => 'Take day off',
-			2 => 'Go on vacation'
-		),
-		'Asdf6' => array(
-			0 => 'Finish this app',
-			1 => 'Or else...',
+		4 => array (
+			'ListID' => 4,
+			'UserID' => 'default',
+			'ListTitle' => 'List Title',
+			'ListColor' => $COLORS[5],
 		),
 	);
 
-	$SAMPLE_COLORS = array(
-		'Chores' => '#FF7000',
-		'Dreams' => '#FFC200',
-		'Combo' => '#52CC00',
-		'Chores2' => '#19DBCE',
-		'Etc' => '#56aaff',
-		'Asdf' => '#565fff',
-		'Asdf2' => '#9f56ff',
-		'Asdf3' => '#ff56f3',
-		'Asdf4' => '#FF5656',
-		'Asdf5' => '#FF7000',
-		'Asdf6' => '#FFC200'
-	)
+	$DEFAULT_LIST_ITEMS_0 = array (
+		0 => array (
+			'ListItemID' => 0,
+			'ListID' => 0,
+			'ListItemText' => 'Test1',
+			'ListItemDone' => false
+		),
+		1 => array (
+			'ListItemID' => 1,
+			'ListID' => 0,
+			'ListItemText' => 'Test2',
+			'ListItemDone' => false
+		),
+		2 => array (
+			'ListItemID' => 2,
+			'ListID' => 0,
+			'ListItemText' => 'Test3',
+			'ListItemDone' => false
+		),
+		3 => array (
+			'ListItemID' => 3,
+			'ListID' => 0,
+			'ListItemText' => 'Test4',
+			'ListItemDone' => false
+		),
+		4 => array (
+			'ListItemID' => 4,
+			'ListID' => 0,
+			'ListItemText' => 'Test5',
+			'ListItemDone' => false
+		),
+		5 => array (
+			'ListItemID' => 5,
+			'ListID' => 0,
+			'ListItemText' => 'Test6',
+			'ListItemDone' => false
+		),
+	);
+
+	$DEFAULT_LIST_ITEMS_1 = array (
+		0 => array (
+			'ListItemID' => 0,
+			'ListID' => 1,
+			'ListItemText' => 'Test1',
+			'ListItemDone' => false
+		),
+		1 => array (
+			'ListItemID' => 1,
+			'ListID' => 1,
+			'ListItemText' => 'Test2',
+			'ListItemDone' => false
+		),
+		2 => array (
+			'ListItemID' => 2,
+			'ListID' => 1,
+			'ListItemText' => 'Test3',
+			'ListItemDone' => false
+		),
+		3 => array (
+			'ListItemID' => 3,
+			'ListID' => 1,
+			'ListItemText' => 'Test4',
+			'ListItemDone' => false
+		),
+		4 => array (
+			'ListItemID' => 4,
+			'ListID' => 1,
+			'ListItemText' => 'Test5',
+			'ListItemDone' => false
+		),
+	);
+
+	$DEFAULT_LIST_ITEMS_2 = array (
+		0 => array (
+			'ListItemID' => 0,
+			'ListID' => 2,
+			'ListItemText' => 'Test1',
+			'ListItemDone' => false
+		),
+		1 => array (
+			'ListItemID' => 1,
+			'ListID' => 2,
+			'ListItemText' => 'Test2',
+			'ListItemDone' => false
+		),
+		2 => array (
+			'ListItemID' => 2,
+			'ListID' => 2,
+			'ListItemText' => 'Test3',
+			'ListItemDone' => false
+		),
+		3 => array (
+			'ListItemID' => 3,
+			'ListID' => 2,
+			'ListItemText' => 'Test4',
+			'ListItemDone' => false
+		),
+		4 => array (
+			'ListItemID' => 4,
+			'ListID' => 2,
+			'ListItemText' => 'Test5',
+			'ListItemDone' => false
+		),
+	);
+
+	$DEFAULT_LIST_ITEMS_3 = array (
+		0 => array (
+			'ListItemID' => 0,
+			'ListID' => 3,
+			'ListItemText' => 'Test1',
+			'ListItemDone' => false
+		),
+		1 => array (
+			'ListItemID' => 1,
+			'ListID' => 3,
+			'ListItemText' => 'Test2',
+			'ListItemDone' => false
+		),
+		2 => array (
+			'ListItemID' => 2,
+			'ListID' => 3,
+			'ListItemText' => 'Test3',
+			'ListItemDone' => false
+		),
+		3 => array (
+			'ListItemID' => 3,
+			'ListID' => 3,
+			'ListItemText' => 'Test4',
+			'ListItemDone' => false
+		),
+		4 => array (
+			'ListItemID' => 4,
+			'ListID' => 3,
+			'ListItemText' => 'Test5',
+			'ListItemDone' => false
+		),
+	);
+
+	$DEFAULT_LIST_ITEMS_4 = array (
+		0 => array (
+			'ListItemID' => 0,
+			'ListID' => 3,
+			'ListItemText' => 'Test1',
+			'ListItemDone' => false
+		),
+		1 => array (
+			'ListItemID' => 1,
+			'ListID' => 3,
+			'ListItemText' => 'Test2',
+			'ListItemDone' => false
+		),
+		2 => array (
+			'ListItemID' => 2,
+			'ListID' => 3,
+			'ListItemText' => 'Test3',
+			'ListItemDone' => false
+		),
+		3 => array (
+			'ListItemID' => 3,
+			'ListID' => 3,
+			'ListItemText' => 'Test4',
+			'ListItemDone' => false
+		),
+		4 => array (
+			'ListItemID' => 4,
+			'ListID' => 3,
+			'ListItemText' => 'Test5',
+			'ListItemDone' => false
+		),
+	);
+
+	$DEFAULT_LIST_ITEMS = array(
+		0 => $DEFAULT_LIST_ITEMS_0,
+		1 => $DEFAULT_LIST_ITEMS_1,
+		2 => $DEFAULT_LIST_ITEMS_2,
+		3 => $DEFAULT_LIST_ITEMS_3,
+		4 => $DEFAULT_LIST_ITEMS_4,
+	);
 ?>

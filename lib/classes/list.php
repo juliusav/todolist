@@ -1,17 +1,16 @@
 <?php
 class ToDoList {
-	private $title = '';
 	private $list = array();
-	private $color = '';
+	private $items = array();
 	private $shades = array();
 
-  function __construct($title, $list, $color) {
-  	$this->title = $title;
+  function __construct($list, $items) {
     $this->list = $list;
-    $this->color = $color;
-    $this->shades = $this->getShades(hex2rgb($color));
+    $this->items = $items;
+    $this->shades = $this->getShades(hex2rgb($list['ListColor']));
   }
-
+  
+  //Return hex shades of specific color 
   private function getShades($color) {
   	$shadesArr = array();
 
@@ -29,17 +28,18 @@ class ToDoList {
   	return $shadesArr;
   }
 
+  //Return li for each item
  	private function getList() {
  		$entireList = '';
  		$shadeCounter = 0;
  		$shadeDirection = 'up';
 
  		//Add each list item
-    foreach ($this->list as $index=>$item) {
+    foreach ($this->items as $index=>$item) {
     	$entireList .= "
 				<li>
 					<div class='item' style='background-color:".$this->shades[$shadeCounter].";'>
-						<h3>" .$item. "</h3>
+						<h3>" .$item['ListItemText']. "</h3>
 						<span class='arrow'><i class='fa fa-chevron-right'></i></span>
 					</div>
 					<div class='hover-container'>
@@ -79,10 +79,11 @@ class ToDoList {
     return $entireList;
   }
 
+  //Return HTML for list
 	function generate() {
 		echo (
 			"<div class='box'>
-				<h1 style='background-color:".$this->color.";'>".$this->title."</h1>
+				<h1 style='background-color:".$this->list['ListColor'].";'>".$this->list['ListTitle']."</h1>
 				<ul>".$this->getList()."</ul>
 			</div>"
 		);
